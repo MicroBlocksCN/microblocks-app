@@ -1,0 +1,10 @@
+{
+  "appId": "cn.microblocksfun.pad",
+  "appName": "microblocks",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}
