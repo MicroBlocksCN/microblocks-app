@@ -1,9 +1,10 @@
 {
-  "name": "capacitor-app",
+  "name": "microblocks-app",
   "version": "1.0.0",
-  "description": "An Amazing Capacitor App",
+  "description": "microblocks binding for tablet",
   "type": "module",
   "keywords": [
+    "microblocks",
     "capacitor",
     "mobile"
   ],
