@@ -5,3 +5,19 @@ node_modules/
 .DS_Store
 .sourcemaps
 dist/
+
+# ignore webapp output
+
+src/emModule.js
+src/icons
+src/boardie
+src/gp*
+src/microblocks.html
+src/microblocksCN.js
+src/sw.js
+src/emModules.js
+src/favicon.ico
+src/FileSaver.js
+
+
+
