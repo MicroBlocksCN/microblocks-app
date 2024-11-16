@@ -1,5 +1,5 @@
 {
-  "appId": "cn.microblocksfun.pad",
+  "appId": "cn.kittenbot.mblock",
   "appName": "microblocks",
   "webDir": "dist",
   "plugins": {
