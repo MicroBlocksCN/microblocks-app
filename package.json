@@ -19,7 +19,8 @@
     "@capacitor/camera": "latest",
     "@capacitor/core": "latest",
     "@capacitor/ios": "^6.1.2",
-    "@capacitor/splash-screen": "latest"
+    "@capacitor/splash-screen": "latest",
+    "@capacitor/status-bar": "^6.0.1"
   },
   "devDependencies": {
     "@capacitor/cli": "latest",
