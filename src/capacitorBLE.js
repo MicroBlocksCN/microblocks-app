@@ -1,5 +1,6 @@
 // TODO: implement in microblocks-app repo instead
 // capacitorBLE.js
+import { BleClient } from "@capacitor-community/bluetooth-le";
 class CapacitorBLESerial {
     constructor() {
         this.device = null;
@@ -10,7 +11,7 @@ class CapacitorBLESerial {
 
     async initialize() {
         // Get BleClient from Capacitor
-        this.bleClient = window.Capacitor.Plugins.BluetoothLe;
+        this.bleClient = BleClient;
         await this.bleClient.initialize();
     }
 
@@ -98,3 +99,4 @@ class CapacitorBLESerial {
         }
     }
 }
+window.CapacitorBLESerial = CapacitorBLESerial;
