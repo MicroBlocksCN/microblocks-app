@@ -2,6 +2,7 @@
   "appId": "cn.kittenbot.mblock",
   "appName": "microblocks",
   "webDir": "dist",
+  "loggingBehavior": "none",
   "plugins": {
     "SplashScreen": {
       "launchShowDuration": 0

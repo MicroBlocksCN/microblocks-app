@@ -1,6 +1,11 @@
 // TODO: implement in microblocks-app repo instead
 // capacitorBLE.js
 import { BleClient } from "@capacitor-community/bluetooth-le";
+
+const MICROBLOCKS_SERVICE_UUID = 'bb37a001-b922-4018-8e74-e14824b3a638'
+const MICROBLOCKS_RX_CHAR_UUID = 'bb37a002-b922-4018-8e74-e14824b3a638' // board receive characteristic
+const MICROBLOCKS_TX_CHAR_UUID = 'bb37a003-b922-4018-8e74-e14824b3a638' // board transmit characteristic
+
 class CapacitorBLESerial {
     constructor() {
         this.device = null;
@@ -25,7 +30,11 @@ class CapacitorBLESerial {
             });
 
             // Connect to device
-            await this.bleClient.connect(this.device.deviceId);
+            await this.bleClient.connect(this.device.deviceId , (deviceId) => {
+                // disconnect callback
+                console.log("Disconnected from device: " + deviceId);
+                this.disconnect();
+            });
 
             // Start notifications
             await this.bleClient.startNotifications(
@@ -79,7 +88,7 @@ class CapacitorBLESerial {
             // Split data into chunks if needed
             for (let i = 0; i < data.length; i += BLE_PACKET_LEN) {
                 const chunk = data.slice(i, Math.min(i + BLE_PACKET_LEN, data.length));
-                await this.bleClient.write(
+                await this.bleClient.writeWithoutResponse(
                     this.device.deviceId,
                     MICROBLOCKS_SERVICE_UUID,
                     MICROBLOCKS_RX_CHAR_UUID,
