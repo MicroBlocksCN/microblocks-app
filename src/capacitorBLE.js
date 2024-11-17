@@ -78,7 +78,7 @@ class CapacitorBLESerial {
         return this.connected;
     }
 
-    async write_data(data) {
+    write_data(data) {
         if (!this.device || !this.connected) return 0;
         if (this.sendInProgress) return 0;
 
@@ -88,7 +88,7 @@ class CapacitorBLESerial {
             // Split data into chunks if needed
             for (let i = 0; i < data.length; i += BLE_PACKET_LEN) {
                 const chunk = data.slice(i, Math.min(i + BLE_PACKET_LEN, data.length));
-                await this.bleClient.writeWithoutResponse(
+                this.bleClient.writeWithoutResponse(
                     this.device.deviceId,
                     MICROBLOCKS_SERVICE_UUID,
                     MICROBLOCKS_RX_CHAR_UUID,
