@@ -1,12 +1,11 @@
-## Created with Capacitor Create App
+## Microblocks App for Tablet
 
 This app was created using [`@capacitor/create-app`](https://github.com/ionic-team/create-capacitor-app),
 and comes with a very minimal shell for building an app.
 
-### Running this example
+### Building the app
 
-To run the provided example, you can use `npm start` command.
-
-```bash
-npm start
-```
+- Copy the webapp output to the `src` folder.
+- Run `npm run build` to build the app.
+- Run `npx cap sync` to sync the app with the webapp.
+- Run `npx cap open` to open the app in Xcode.
