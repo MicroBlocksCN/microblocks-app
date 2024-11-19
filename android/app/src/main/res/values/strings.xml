@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">microblocks</string>
+    <string name="title_activity_main">microblocks</string>
+    <string name="package_name">cn.kittenbot.mblock</string>
+    <string name="custom_url_scheme">cn.kittenbot.mblock</string>
+</resources>
